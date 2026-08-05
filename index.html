@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/flip-card.css">
+    <link rel="stylesheet" href="css/aviso.css">
+    <title>DeRose Studio</title>
+</head>
+
+<body>
+    <section class="contenedor-general">
+        <!--   PESTAÑAS   -->
+        <section class="pestanas">
+            <a class="botones inicio" onclick="cambiarCarpeta(1)">INICIO</a>
+            <a class="botones portafolio" onclick="cambiarCarpeta(2)">PORTAFOLIO</a>
+            <a class="botones informacion" onclick="cambiarCarpeta(3)">INFORMACIÓN</a>
+            <a class="botones quiensoy" onclick="cambiarCarpeta(4)">QUIÉN SOY</a>
+        </section>
+
+        <!--   carpeta   -->
+
+        <section class="carpetas">
+            <div id="Inicio" class="carpeta inicio">
+                <div class="contenedor">
+                    <div class="cont-foto">
+                        <img src="/assets/img/imgLogo.png" alt="logo">
+                        <h3>POR VIRIDIANA ROCHA</h3>
+                    </div>
+                    <div class="cont-info">
+                        <h1>DE ROSE STUDIO</h1>
+                        <p>DeRose es una marca personal enfocada en diseño y desarrollo web, que
+                            busca transformar ideas en experiencias digitales modernas, creativas y
+                            cercanas. Me caracterizo por realizar estilos frescos, divertidos y profesionales, capaz
+                            de transmitir confianza y pasión en cada proyecto.
+                        </p>
+                        <a class="boton-contacto" href="/html/contacto.html"> ¡HABLAME DE TU IDEA!</a>
+                    </div>
+                </div>
+                <div class="cont-redes">
+                    <a href="https://www.facebook.com/people/DeRose-Studio/61581114051669/" target="_blank"><i
+                            class='bx bxl-facebook-square'></i></a>
+                    <a href="https://www.instagram.com/derose_studio/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </div>
+                <a class="boton-aviso" href="#ventanaAviso">AVISO DE SEGURIDAD</a>
+            </div>
+            <div id="Portafolio" class="carpeta portafolio">
+                <div class="contenedor">
+                    <div class="titulo">
+                        <h2>MIS PROYECTOS</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="flip-card">
+                            <a href="https://uxpmayores.com/" target="_blank">
+                                <div class="flip-card-inner">
+
+                                    <div class="flip-card-front">
+                                        <img src="/assets/img/UXP.png" alt="Proyecto 1">
+                                        <h4>Diseño web para adultos mayores</h4>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>RENÉ N. PROFESOR</h4>
+                                        <p>“El proceso fue súper sencillo y rápido. Me explicaron cada paso y el
+                                            resultado fue espectacular.”</p>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flip-card a">
+                            <a href="">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="/assets/img/Aldim3D.png" alt="Proyecto 2">
+                                        <h4>Aldim 3D</h4>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>DAVID R. EMPRENDEDOR</h4>
+                                        <p>“El sitio quedó justo como lo imaginaba: moderno, funcional y muy visual.
+                                            Todo el proceso fue muy claro y profesional.”</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flip-card">
+                            <a href="https://proyectos.lovestoblog.com/" target="_blank">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="/assets/img/TKW.png" alt="Proyecto 4">
+                                        <h4>Juárez Élite Taekwondo</h4>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>ADRIÁN D. ENTRENADOR</h4>
+                                        <p>“Muy profesionales y creativos. Lograron transformar mis ideas en una
+                                            página
+                                            web que refleja perfectamente mi negocio.”</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flip-card a">
+                            <a href="https://proyectos.lovestoblog.com/p2.html" target="_blank">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="/assets/img/ODS.png" alt="Proyecto 3">
+                                        <h4>Agenda 2030</h4>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>PROYECTO ESCOLAR</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flip-card">
+                            <a href="https://proyectos.lovestoblog.com/museo.html" target="_blank">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="/assets/img/CH.png" alt="Proyecto 5">
+                                        <h4>Cooper Hewitt</h4>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>PROYECTO ESCOLAR</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--<div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="img_avatar.png" alt="Proyecto 6" style="width:300px;height:300px;">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>John Doe</h4>
+                                        <p>Architect & Engineer</p>
+                                        <p>We love that guy</p>
+                                    </div>
+                                </div>
+                            </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div id="Informacion" class="carpeta informacion">
+                <div class="contenedor">
+                    <div class="procesos">
+                        <a class="proceso" onclick="currentSlide(1)">CONTACTAME</a>
+                        <a class="proceso" onclick="currentSlide(2)">HABLAMOS</a>
+                        <a class="proceso" onclick="currentSlide(3)">COTIZACIÓN</a>
+                        <a class="proceso" onclick="currentSlide(4)">DESARROLLO</a>
+                        <a class="proceso" onclick="currentSlide(5)">ENTREGA</a>
+                    </div>
+                    <div class="info-procesos">
+                        <div class="info-proceso    ">
+                            <h3>CONTACTAME</h3>
+                            <p>Por medio del formulario de contacto, mandame un mensaje con tu informacion y tu
+                                idea. Yo
+                                me pondré en contacto contigo en menos de 24 horas para hablar sobre tu proyecto.
+                            </p>
+                            <a class="boton-contacto" href="/html/contacto.html"> ¡HABLAME DE TU IDEA!</a>
+                        </div>
+                        <div class="info-proceso">
+                            <h3>HABLEMOS DE TU PROYECTO</h3>
+                            <p>Cuéntame con detalle qué necesitas: el tipo de proyecto, estilo que te gustaría,
+                                funcionalidades, colores, referencias y cualquier idea que tengas en mente. Entre más
+                                información me compartas, más preciso será el proceso y el resultado final.</p>
+                        </div>
+                        <div class="info-proceso">
+                            <h3>HAGO TU COTIZACIÓN</h3>
+                            <p>Con base en la información que me compartiste, preparo una cotización clara y
+                                personalizada. Incluye tiempos de entrega, alcances, proceso de trabajo y el costo
+                                final,
+                                para que tengas total transparencia antes de comenzar. <br> Para iniciar el proyecto, se
+                                realiza un pago del 50% del total; el 50% restante se liquida al finalizar.</p>
+                        </div>
+                        <div class="info-proceso">
+                            <h3>DESARROLLO TU PROYECTO</h3>
+                            <p>Una vez confirmado el pago inicial del 50%, comienzo con el diseño y desarrollo de tu
+                                proyecto. Mantengo comunicación constante contigo y te comparto avances para asegurar
+                                que el resultado vaya alineado a lo que buscas.</p>
+                        </div>
+                        <div class="info-proceso">
+                            <h3>TE ENTREGO TU PROYECTO</h3>
+                            <p>Cuando el proyecto está terminado, realizamos una revisión final para asegurarnos de que
+                                todo esté perfecto. Posteriormente, se liquida el 50% restante y te hago la entrega
+                                total:
+                                accesos, archivos y recursos necesarios.
+                                Si lo deseas, también te doy una breve guía para administrar tu sitio con facilidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Quiensoy" class="carpeta quiensoy">
+                <div class="contenedor">
+                    <div class="cont-quiensoy">
+                        <div class="info-quiensoy a izq">
+                            <h3>Misión</h3>
+                            <p> Mi misión es ayudar a las personas a traspasar sus
+                                ideas a medios digitales mediante
+                                soluciones de diseño y desarrollo web
+                                creativas, modernas y funcionales,</p>
+                        </div>
+                        <div class="info-quiensoy b">
+                            <h3>Quién soy</h3>
+                            <p>DeRose es una marca personal enfocada en diseño y desarrollo web, que
+                                busca transformar ideas en experiencias digitales modernas, creativas y
+                                cercanas.
+                            </p>
+                        </div>
+                        <div class="info-quiensoy a der">
+                            <h3>Visión</h3>
+                            <p>Mi visión es ser en una marca reconocida por
+                                ofrecer experiencias digitales innovadoras,
+                                que inspiren y conecten a las
+                                personas con el mundo online,
+                                con un estilo único.</p>
+                        </div>
+                    </div>
+                    <a class="boton-contacto" href="/html/contacto.html"> ¡HABLAME DE TU IDEA!</a>
+                </div>
+            </div>
+            <div class="aviso">
+                <div id="ventanaAviso" class="contenedor-aviso">
+                    <div class="ventana-aviso">
+                        <a href="#Inicio"><i class='bx bx-x'></i></a>
+                        <h3>AVISO DE SEGURIDAD</h3>
+                        <p>DeRose Studio con domicilio en Avenida del Charro 450, 32618 Juárez, Chihuahua, conforme a lo
+                            establecido en la Ley Federal de Protección de Datos en Posesión de Particulares, pone a
+                            disposición de nuestros clientes, proveedores, empleados y público en general, nuestro Aviso
+                            de
+                            Privacidad. <br>
+                            Los datos personales que nos proporciona son utilizados estrictamente en la realización de
+                            funciones propias de nuestra empresa y por ningún motivo serán transferidos a terceros.
+                            A nuestros clientes les solicitamos los siguientes datos personales:</p>
+                        <ul>
+                            <li>
+                                <p>■ Nombre, teléfono y correo electrónico para facilitar el proceso de contratación de
+                                    nuestro
+                                    servicio y/o compra de nuestros productos.</p>
+                            </li>
+                            <li>
+                                <p>■ RFC para completar los datos de facturación y realizar el proceso en cuestión.</p>
+                            </li>
+                        </ul>
+                        <p>En caso de realizar modificaciones al presente Aviso de Privacidad, le informaremos mediante
+                            correo electrónico, nuestro sitio web oficial, medios impresos y nuestros operadores
+                            telefónicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+<script>
+    let current = 1;
+    let isAnimating = false;
+
+    function currentSlide(n) {
+        if (isAnimating || n === current) return;
+
+        isAnimating = true;
+
+        const slides = document.querySelectorAll('.info-proceso');
+        const botones = document.querySelectorAll('.proceso');
+
+        const oldSlide = slides[current - 1];
+        const newSlide = slides[n - 1];
+
+        // Quitar clases activas en botones
+        botones.forEach(btn => btn.classList.remove("active"));
+        botones[n - 1].classList.add("active");
+
+        // Animación de salida
+        oldSlide.classList.remove("active");
+        oldSlide.classList.add("exit");
+
+        // Animación de entrada
+        newSlide.classList.add("active");
+        newSlide.classList.remove("exit");
+
+        // Cuando termina la animación, se limpia
+        setTimeout(() => {
+            oldSlide.classList.remove("exit");
+            isAnimating = false;
+        }, 600);
+
+        current = n;
+    }
+
+    let carpetaActual = 0;
+
+    function cambiarCarpeta(n) {
+        const carpetas = document.querySelectorAll(".carpeta");
+        const botones = document.querySelectorAll(".botones");
+
+        if (n - 1 === carpetaActual) return; // evitar doble clic
+
+        const anterior = carpetas[carpetaActual];
+        const nueva = carpetas[n - 1];
+
+        // Quitar active y poner salida
+        anterior.classList.remove("active");
+        anterior.classList.add("exit");
+
+        // Activar nueva
+        nueva.classList.add("active");
+        nueva.classList.remove("exit");
+
+        // Actualizar pestañas
+        botones.forEach(b => b.classList.remove("active"));
+        botones[n - 1].classList.add("active");
+
+        // Quitar exit después de la animación
+        setTimeout(() => {
+            anterior.classList.remove("exit");
+        }, 600);
+
+        carpetaActual = n - 1;
+    }
+
+
+    // Iniciar mostrando el primer slide
+    document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll('.info-proceso');
+        const botones = document.querySelectorAll('.proceso');
+        const carpetas = document.querySelectorAll(".carpeta");
+        const pestanas = document.querySelectorAll(".botones");
+
+        carpetas.forEach(c => c.classList.remove("active"));
+        pestanas.forEach(p => p.classList.remove("active"));
+
+        carpetas[0].classList.add("active");
+        pestanas[0].classList.add("active");
+
+        slides[0].classList.add("active");
+        botones[0].classList.add("active");
+    });
+</script>
+
+
+</html>
