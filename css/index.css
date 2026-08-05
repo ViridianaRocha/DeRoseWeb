@@ -1,0 +1,482 @@
+:root {
+    --verdeClaro: #c5e077;
+    --rosaClaro: rgb(239, 154, 185);
+    --verdeOscuro: #8fa44f;
+    --rosaOscuro: #c46789;
+    --blanco: #f9f6e5;
+    --negro: #232220;
+}
+
+/*
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+  
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+}
+
+.inicio {
+    background-color: var(--rosaClaro);
+    left: 0vw;
+}
+
+.carpetas .inicio {
+    background-image: url(/assets/img/lineas\ 2.png);
+    background-size: cover;
+}
+
+.portafolio {
+    background-color: var(--rosaOscuro);
+    color: var(--blanco);
+    left: 15vw;
+}
+
+.carpetas .portafolio {
+    background-image: url(/assets/img/linea\ 3.png);
+    background-size: cover;
+}
+
+.informacion {
+    background-color: var(--verdeClaro);
+    left: 30vw;
+}
+
+.carpetas .informacion {
+    background-image: url(/assets/img/linea\ 3.png);
+    background-size: cover;
+}
+
+.quiensoy {
+    background-color: var(--verdeOscuro);
+    left: 45vw;
+}
+
+.carpetas .quiensoy {
+    background-image: url(/assets/img/lineas\ 1.png);
+    background-size: cover;
+}
+
+.contenedor-general {
+    width: 95%;
+    height: 93.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.carpetas{
+    overflow: hidden;
+    position: relative; /* IMPORTANTE: Esto hace de "ancla" para los hijos absolutos */
+    width: 100%;
+    height: 86vh;       /* Debe tener la misma altura que le diste a los hijos */
+}
+
+.pestanas {
+    width: 60vw;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+    z-index: 1;
+}
+
+.pestanas a {
+    width: 15vw;
+    height: 45px;
+    position: absolute;
+    margin-right: 1px;
+    border-radius: 25px 25px 0 0;
+    border: solid 2px var(--negro);
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    text-decoration: none;
+    color: var(--negro);
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.pestanas a:hover{
+    height: 50px;
+}
+
+.pestanas a:active{
+    height: 40px;
+    padding: 0;
+    bottom: -2px;
+}
+
+.carpetas .carpeta {
+    width: 100%;
+    height: 86vh;
+    position: absolute;
+    left: 0;
+    border-radius: 0 25px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-500px);
+    transition: opacity .6s ease, transform .6s ease;
+    border: solid 2px var(--negro);
+}
+
+.carpetas .carpeta.active{
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 0;
+}
+
+.carpetas .carpeta.active.exit {
+    opacity: 0;
+    transform: translateY(500px);
+    transition: opacity .6s ease, transform .6s ease;
+    z-index: 5;
+}
+
+.carpetas .carpeta .contenedor {
+    width: 95%;
+    height: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.carpetas .carpeta .contenedor .cont-foto {
+    width: 29%;
+    height: 85%;
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.204);
+    border: solid 2px var(--negro);
+    transition: 0.5s ease;
+}
+
+.carpetas .carpeta .contenedor .cont-foto:hover{
+    transform: rotate(-5deg);
+}
+
+.carpetas .carpeta .contenedor .cont-foto img {
+    background-color: #232220;
+    width: 280px;
+    height: 280px;
+}
+
+.carpetas .carpeta .contenedor .cont-foto h3 {
+    font-size: 1.8rem;
+}
+
+.carpetas .carpeta .contenedor .cont-info {
+    width: 50%;
+    height: 73%;
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.204);
+    border: solid 2px var(--negro);
+    transition: .5s ease;
+}
+
+.carpetas .carpeta .contenedor .cont-info:hover{
+    transform: rotate(3deg);
+}
+
+.carpetas .carpeta .contenedor .cont-info p {
+    width: 90%;
+}
+
+.carpetas .carpeta .contenedor .boton-contacto {
+    width: 36%;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px var(--negro);
+    color: var(--negro);
+    background-color: var(--verdeClaro);
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.27);
+    transition: transform 0.5s ease;
+}
+
+.carpetas .carpeta .contenedor .boton-contacto:hover {
+    background-color: var(--verdeOscuro);
+    transform: translateY(-5px);
+}
+
+.carpetas .carpeta .cont-redes {
+    width: 12%;
+    height: 17%;
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+}
+
+.carpetas .carpeta .cont-redes a {
+    position: absolute;
+    background-color: var(--blanco);
+    border-radius: 15px;
+    border: solid 2px var(--negro);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.27);
+    transition: transform 0.5s ease;
+}
+
+.carpetas .carpeta .cont-redes a:hover{
+    background-color: var(--negro);
+    transform:translateX(-5px) translateY(-5px);
+}
+
+.carpetas .carpeta .cont-redes a:nth-child(1) {
+    bottom: 0;
+    left: 0;
+}
+
+.carpetas .carpeta .cont-redes a:nth-child(2) {
+    top: 0;
+    right: 0;
+}
+
+.carpetas .carpeta .cont-redes a i {
+    font-size: 4rem;
+    color: var(--rosaOscuro);
+    transition: 0.5s ease;
+}
+
+.carpetas .carpeta .cont-redes a i:hover{
+    color: var(--blanco);
+}
+
+/* ----- Proyectos ----- */
+
+.carpetas .portafolio .contenedor {
+    height: 100%;
+    flex-direction: column;
+}
+
+.carpetas .portafolio .contenedor .titulo h2 {
+    color: var(--negro);
+}
+
+.carpetas .portafolio .contenedor .cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carpetas .portafolio .contenedor .cards .a{
+    margin-top: 10%;
+}
+
+.carpetas .portafolio .contenedor .cards .flip-card .flip-card-inner .flip-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.carpetas .portafolio .contenedor .cards .flip-card .flip-card-inner .flip-card-front img {
+    width: 120px;
+    height: 120px;
+    background-color: #232220;
+    border: solid 2px var(--negro);
+}
+
+.carpetas .portafolio .contenedor .cards .flip-card .flip-card-inner .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.carpetas .portafolio .contenedor .cards .flip-card a .flip-card-inner .flip-card-back h4 {
+    width: 90%;
+    font-size: 1rem;
+}
+
+.carpetas .portafolio .contenedor .cards .flip-card a .flip-card-inner .flip-card-back p {
+    width: 90%;
+    font-size: .8rem;
+    font-style: italic;
+}
+
+
+/* ----- INFORMACION ----- */
+
+.carpetas .informacion .contenedor {
+    justify-content: space-around;
+}
+
+.carpetas .informacion .contenedor .procesos {
+    width: 20vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carpetas .informacion .contenedor .procesos a {
+    background-color: var(--rosaClaro);
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.7rem;
+    border-radius: 10px;
+    border: solid 2px var(--negro);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.27);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.carpetas .informacion .contenedor .procesos a:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+    transform:translateX(5px) translateY(5px);
+}
+
+/* Contenedor con posición relativa */
+.carpetas .informacion .contenedor .info-procesos {
+    width: 50vw;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Todos los slides posicionados uno encima de otro */
+.carpetas .informacion .contenedor .info-procesos .info-proceso {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blanco);
+    border: solid 2px var(--negro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(-500px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+/* Slide visible */
+.carpetas .informacion .contenedor .info-procesos .info-proceso.active {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 10;
+}
+
+/* Slide saliendo hacia abajo */
+.carpetas .informacion .contenedor .info-procesos .info-proceso.exit {
+    opacity: 0;
+    transform: translateY(500px);
+    transition: opacity .6s ease, transform .6s ease;
+    z-index: 5;
+}
+
+.carpetas .informacion .contenedor .info-proceso p {
+    width: 90%;
+}
+
+/* ----- Quien soy ----- */
+
+.carpetas .quiensoy .contenedor {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy {
+    width: 79%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy .info-quiensoy {
+    background-color: var(--blanco);
+    border: solid 2px var(--negro);
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.27);
+    transition: transform 0.5s ease;
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy .a {
+    position: absolute;
+    z-index: 0;
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy .b {
+    z-index: 1;
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy .izq {
+    bottom: 0;
+    left: 0;
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy .der {
+    bottom: 0;
+    right: 0;
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy .b:hover {
+    transform: translateY(-10px) rotate(-5deg);
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy .izq:hover {
+    z-index: 2;
+    transform: rotate(-5deg);
+}
+
+.carpetas .quiensoy .contenedor .cont-quiensoy .der:hover {
+    z-index: 2;
+    transform: rotate(5deg);
+}
+
+.carpetas .quiensoy .contenedor .info-quiensoy p {
+    width: 80%;
+    margin-top: 25px;
+}
+
+.carpetas .quiensoy .contenedor .boton-contacto {
+    background-color: var(--rosaClaro);
+    transition: 0.3s ease;
+}
+
+.carpetas .quiensoy .contenedor .boton-contacto:hover {
+    background-color: var(--blanco);
+}

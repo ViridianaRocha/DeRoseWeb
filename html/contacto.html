@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/contacto.css">
+    <link rel="stylesheet" href="/css/aviso.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <section class="contenedor-general">
+        <!--   PESTAÑAS   -->
+        <section class="pestanas">
+            <a class="botones contacto" href="/index.html"><i class='bx  bx-chevron-left'></i>VOLVER</a>
+        </section>
+        <section class="carpetas">
+            <div class="carpeta contacto">
+                <div class="formulario">
+                    <div class="inf">
+                        <h3>¡CUENTAME TU IDEA Y HAGAMOSLA REALIDAD!</h3>
+                    </div>
+                    <form action="php/conexion.php" method="post" id="contact_form" runat="server"
+                        enctype="multipart/form-data">
+                        <div class="fomulario_contenedor">
+                            <div class="espacios">
+                                <label for="nombre">NOMBRE</label>
+                                <input type="text" id="Nombre" name="nombre" maxlength="30" required> <br>
+                            </div>
+                            <div class="espacios">
+                                <label for="email">EMAIL</label>
+                                <input type="email" id="Email" name="email" maxlength="30" required> <br>
+                            </div>
+                            <div class="espacios">
+                                <label for="asunto">ASUNTO</label>
+                                <input type="text" id="Asunto" name="asunto" maxlength="60" required> <br>
+                            </div>
+                            <div class="espacios">
+                                <label for="mensaje">MENSAJE</label>
+                                <textarea name="mensaje" id="Mensaje" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="esp-btn">
+                            <button class="submit" type="submit">ENVIAR</button>
+                        </div>
+                    </form>
+                </div>
+                <a class="boton-aviso" href="#ventanaAviso">AVISO DE SEGURIDAD</a>
+            </div>
+            <div class="aviso">
+                <div id="ventanaAviso" class="contenedor-aviso">
+                    <div class="ventana-aviso">
+                        <a href="#Inicio"><i class='bx bx-x'></i></a>
+                        <h3>AVISO DE SEGURIDAD</h3>
+                        <p>DeRose Studio con domicilio en Avenida del Charro 450, 32618 Juárez, Chihuahua, conforme a lo
+                            establecido en la Ley Federal de Protección de Datos en Posesión de Particulares, pone a
+                            disposición de nuestros clientes, proveedores, empleados y público en general, nuestro Aviso
+                            de
+                            Privacidad. <br>
+                            Los datos personales que nos proporciona son utilizados estrictamente en la realización de
+                            funciones propias de nuestra empresa y por ningún motivo serán transferidos a terceros.
+                            A nuestros clientes les solicitamos los siguientes datos personales:</p>
+                        <ul>
+                            <li>
+                                <p>■ Nombre, teléfono y correo electrónico para facilitar el proceso de contratación de
+                                    nuestro
+                                    servicio y/o compra de nuestros productos.</p>
+                            </li>
+                            <li>
+                                <p>■ RFC para completar los datos de facturación y realizar el proceso en cuestión.</p>
+                            </li>
+                        </ul>
+                        <p>En caso de realizar modificaciones al presente Aviso de Privacidad, le informaremos mediante
+                            correo electrónico, nuestro sitio web oficial, medios impresos y nuestros operadores
+                            telefónicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
